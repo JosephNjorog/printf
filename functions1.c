@@ -17,7 +17,7 @@ int printisha_unsigned(va_list types, char buffer[],
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
 
-	num = convert_size_unsgnd(num, size);
+	num = converter_mtoto(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
