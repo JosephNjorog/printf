@@ -1,6 +1,6 @@
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
+void printisha_buffer(char buffer[], int *buff_ind);
 
 /**
  * _printf - Printf function
@@ -25,19 +25,19 @@ int _printf(const char *format, ...)
 		{
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
+				printisha_buffer(buffer, &buff_ind);
 			/* write(1, &format[i], 1);*/
 			printed_chars++;
 		}
 		else
 		{
-			print_buffer(buffer, &buff_ind);
-			flags = get_flags(format, &i);
-			width = get_width(format, &i, list);
-			precision = get_precision(format, &i, list);
-			size = get_size(format, &i);
+			printisha_buffer(buffer, &buff_ind);
+			flags = pata_flags(format, &i);
+			width = pata_width(format, &i, list);
+			precision = pata_precision(format, &i, list);
+			size = pata_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer,
+			printed = handler_print(format, &i, list, buffer,
 				flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	print_buffer(buffer, &buff_ind);
+	printisha_buffer(buffer, &buff_ind);
 
 	va_end(list);
 
@@ -53,11 +53,11 @@ int _printf(const char *format, ...)
 }
 
 /**
- * print_buffer - Prints the contents of the buffer if it exist
+ * printisha_buffer - Prints the contents of the buffer if it exist
  * @buffer: Array of chars
  * @buff_ind: Index at which to add next char, represents the length.
  */
-void print_buffer(char buffer[], int *buff_ind)
+void printisha_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
 		write(1, &buffer[0], *buff_ind);
