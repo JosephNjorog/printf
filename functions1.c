@@ -32,7 +32,7 @@ int printisha_unsigned(va_list types, char buffer[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	return (andika_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
 /**
@@ -73,7 +73,7 @@ int printisha_octal(va_list types, char buffer[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	return (andika_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
 /**
@@ -89,7 +89,7 @@ int printisha_octal(va_list types, char buffer[],
 int printisha_hexadecimal(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	return (print_hexa(types, "0123456789abcdef", buffer,
+	return (printisha_hexa(types, "0123456789abcdef", buffer,
 		flags, 'x', width, precision, size));
 }
 
@@ -107,7 +107,7 @@ int printisha_hexadecimal(va_list types, char buffer[],
 int printisha_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	return (print_hexa(types, "0123456789ABCDEF", buffer,
+	return (printisha_hexa(types, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precision, size));
 }
 
@@ -154,5 +154,5 @@ int printisha_hexa(va_list types, char map_to[], char buffer[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	return (andika_unsgnd(0, i, buffer, flags, width, precision, size));
 }
