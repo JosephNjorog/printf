@@ -16,7 +16,7 @@ int printisha_char(va_list types, char buffer[],
 {
 	char c = va_arg(types, int);
 
-	return (handle_write_char(c, buffer, flags, width, precision, size));
+	return (handler_kamba(c, buffer, flags, width, precision, size));
 }
 
 /**
@@ -117,7 +117,7 @@ int printisha_int(va_list types, char buffer[],
 	long int n = va_arg(types, long int);
 	unsigned long int num;
 
-	n = convert_size_number(n, size);
+	n = converter_mzee(n, size);
 
 	if (n == 0)
 		buffer[i--] = '0';
