@@ -18,10 +18,10 @@ int njoro_print(const char *fmt, int *ind, va_list list, char buffer[],
 {
 	int i, unknow_len = 0, printed_chars = -1;
 	fmt_t fmt_types[] = {
-		{'c', printisha_char}, {'s', printisha_string}, {'%', print_percent},
-		{'i', printisha_int}, {'d', printisha_int}, {'b', print_binary},
-		{'u', printisha_unsigned}, {'o', printisha_octal}, {'x', print_hexadecimal},
-		{'X', printisha_hexa_upper}, {'p', printisha_pointer}, {'S', print_non_printable},
+		{'c', printisha_char}, {'s', printisha_string}, {'%', printisha_percent},
+		{'i', printisha_int}, {'d', printisha_int}, {'b', printisha_binary},
+		{'u', printisha_unsigned}, {'o', printisha_octal}, {'x', printisha_hexadecimal},
+		{'X', printisha_hexa_upper}, {'p', printisha_pointer}, {'S', printisha_non_printable},
 		{'r', printisha_reverse}, {'R', printisha_rot13string}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
