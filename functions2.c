@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_pointer - value of a pointer variable print
+ * printisha_pointer - value of a pointer variable print
  * @types: arguments
  * @buffer: Buffer array
  * @flags:  Calculates active flags
@@ -11,7 +11,7 @@
  * Return: Number of chars printed.
  */
 
-int print_pointer(va_list types, char buffer[],
+int printisha_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char extra_c = 0, padd = ' ';
@@ -53,7 +53,7 @@ int print_pointer(va_list types, char buffer[],
 }
 
 /**
- * print_non_printable - Prints ascii codes in hexa of non printable chars
+ * printisha_non_printable - Prints ascii codes in hexa of non printable chars
  * @types: arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -63,7 +63,7 @@ int print_pointer(va_list types, char buffer[],
  * Return: Number of chars printed
  */
 
-int print_non_printable(va_list types, char buffer[],
+int printisha_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
@@ -93,7 +93,7 @@ int print_non_printable(va_list types, char buffer[],
 }
 
 /**
- * print_reverse - Prints reverse string.
+ * printisha_reverse - Prints reverse string.
  * @types: arguments
  * @buffer: Buffer array
  * @flags:  Calculates active flags
@@ -103,7 +103,7 @@ int print_non_printable(va_list types, char buffer[],
  * Return: Numbers of chars printed
  */
 
-int print_reverse(va_list types, char buffer[],
+int printisha_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char *str;
@@ -136,7 +136,7 @@ int print_reverse(va_list types, char buffer[],
 }
 
 /**
- * print_rot13string - Print a string in rot13.
+ * printisha_rot13string - Print a string in rot13.
  * @types: arguments
  * @buffer: Buffer array
  * @flags:  Calculates active flags
@@ -146,7 +146,7 @@ int print_reverse(va_list types, char buffer[],
  * Return: Numbers of chars printed
  */
 
-int print_rot13string(va_list types, char buffer[],
+int printisha_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char x;

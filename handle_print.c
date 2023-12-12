@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_print - argument based on its type
+ * njoro_print - does so the argument based on its type.
  * @fmt: Formatted string in which to print the arguments.
  * @list: arguments
  * @ind: indeces
@@ -13,7 +13,7 @@
  * Return: 1 or 2;
  */
 
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
+int njoro_print(const char *fmt, int *ind, va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i, unknow_len = 0, printed_chars = -1;

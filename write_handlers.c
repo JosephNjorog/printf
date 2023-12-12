@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_write_char - Prints a string
+ * handler_kamba - Prints a string
  * @c: char types.
  * @buffer: Buffer array
  * @flags:  Calculates active flags.
@@ -11,7 +11,7 @@
  * Return: Number of chars printed.
  */
 
-int handle_write_char(char c, char buffer[],
+int handler_kamba(char c, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = 0;
@@ -43,7 +43,7 @@ int handle_write_char(char c, char buffer[],
 	return (write(1, &buffer[0], 1));
 }
 /**
- * write_number - Prints a string
+ * andika_number - Prints a string
  * @is_negative: Lista of arguments
  * @ind: char types.
  * @buffer: Buffer array to handle print
@@ -54,7 +54,7 @@ int handle_write_char(char c, char buffer[],
  * Return: Number of chars printed.
  */
 
-int write_number(int is_negative, int ind, char buffer[],
+int andika_number(int is_negative, int ind, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
@@ -76,7 +76,7 @@ int write_number(int is_negative, int ind, char buffer[],
 }
 
 /**
- * write_num - Write a number using a bufffer
+ * write_nambari - Write a number using a bufffer
  * @ind: Index at which the number starts on the buffer
  * @buffer: Buffer
  * @flags: Flags
@@ -88,7 +88,7 @@ int write_number(int is_negative, int ind, char buffer[],
  * Return: Number of printed chars.
  */
 
-int write_num(int ind, char buffer[],
+int write_nambari(int ind, char buffer[],
 	int flags, int width, int prec,
 	int length, char padd, char extra_c)
 {
@@ -135,7 +135,7 @@ int write_num(int ind, char buffer[],
 }
 
 /**
- * write_unsgnd - Writes an unsigned number
+ * andika_unsgnd - Writes an unsigned number
  * @is_negative: Number indicating if the num is negative
  * @ind: Index at which the number starts in the buffer
  * @buffer: Array of chars
@@ -146,7 +146,7 @@ int write_num(int ind, char buffer[],
  * Return: Number of written chars.
  */
 
-int write_unsgnd(int is_negative, int ind,
+int andika_unsgnd(int is_negative, int ind,
 	char buffer[],
 	int flags, int width, int precision, int size)
 {
