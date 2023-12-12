@@ -95,9 +95,10 @@ int handler_kamba(char c, char buffer[],
 	int flags, int width, int precision, int size);
 int andika_number(int is_positive, int ind, char buffer[],
 	int flags, int width, int precision, int size);
-int write_nambari(int is_negative, int i, char buffer[], int flags, int width, int precision, int size);
 int andikisha_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
+
+int write_nambari(char buffer[], int is_negative, int i, int flags, int width, int precision, int size);
 
 int andika_unsgnd(int is_negative, int ind,
 char buffer[],
