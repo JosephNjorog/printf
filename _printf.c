@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			precision = pata_precision(format, &i, list);
 			size = pata_size(format, &i);
 			++i;
-			printed = handler_print(format, &i, list, buffer,
+			printed = njoro_print(format, &i, list, buffer,
 				flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
