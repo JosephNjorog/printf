@@ -71,8 +71,7 @@ int andika_number(int is_negative, int ind, char buffer[],
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
 
-	return (write_nambari(ind, buffer, flags, width, precision,
-		length, padd, extra_ch));
+	return write_nambari(buffer, is_negative, ind, flags, width, precision, length, padd, extra_c);
 }
 
 /**
