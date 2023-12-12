@@ -88,9 +88,7 @@ int andika_number(int is_negative, int ind, char buffer[],
  * Return: Number of printed chars.
  */
 
-int write_nambari(int ind, char buffer[],
-	int flags, int width, int prec,
-	int length, char padd, char extra_c)
+int write_nambari(char buffer[], int is_negative, int i, int flags, int width, int precision, int size)
 {
 	int i, padd_start = 1;
 
