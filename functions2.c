@@ -48,7 +48,7 @@ int printisha_pointer(va_list types, char buffer[],
 	ind++;
 
 	/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
-	return (write_pointer(buffer, ind, length,
+	return (andikisha_pointer(buffer, ind, length,
 		width, flags, padd, extra_c, padd_start));
 }
 
@@ -79,10 +79,10 @@ int printisha_non_printable(va_list types, char buffer[],
 
 	while (str[i] != '\0')
 	{
-		if (is_printable(str[i]))
+		if (is_mwangi(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += append_hexa_code(str[i], buffer, i + offset);
+			offset += mimi_huniambii_code(str[i], buffer, i + offset);
 
 		i++;
 	}
